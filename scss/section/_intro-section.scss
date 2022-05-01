@@ -1,0 +1,105 @@
+@use '../custom' as *;
+@use '../componanets/mixins' as *;
+
+.intro-section{
+    @include gradeint;
+    padding: 7rem 0 0 0;
+    width: 100%;
+    height: 100%;
+
+}
+.vdeo-box{
+    position: relative;
+    .imge{  
+        position: relative;
+        width: 100%;
+        height: 180%;
+        opacity: 0.6;
+        padding-bottom: 2rem;
+        border-radius: 5;
+        transform: rotateX(20deg);
+        transform-origin: left;
+       
+       
+        
+    }
+    .loge{
+        padding: 1rem;
+        border-radius: 3rem;
+        background-color: $white;
+        position: absolute;
+        @include absolutecenter;
+        transition: 2s;
+        transform-origin: left;
+         transform:perspective(2000px) translate(-0%, -60%) rotateY(89.99deg);
+        //transform: perspective(2000px)  translate(-60%,-60%)  rotateY(-90deg);
+
+
+    &.active{
+        transform: perspective(2000px)  translate(-60%,-50%) rotateY(0deg);
+    }
+    .form{
+        width:500px;
+        @include media-breakpoint-down(sm) { 
+            width: 300px;
+           
+            
+         }
+        
+
+        input{
+            padding: .6rem;
+            display: block;
+            width: 100%;
+            background-image: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,.95));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 1rem;
+            border-bottom: .2rem solid rgba($primary,0.95);
+            ::placeholder{
+                opacity: .4;
+                text-transform: uppercase;
+                
+            }
+        }
+        label{
+            margin-left: 1.5rem;
+            text-transform: capitalize;
+            background-image: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,.95));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .clouse{
+        position: absolute;
+        top: 1%;
+        right: 3%;
+        font-size: 2.5rem;
+        color: $primary;
+        cursor: pointer;
+
+
+    }
+    
+    }
+
+}
+.border-animation{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border: 0.55rem solid $white;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    opacity: .6;
+    animation: pluse-border 1.5s linear infinite;
+    &--border-1{
+        animation-delay: 1s;
+    }
+    &--border-1{
+        animation-delay: 1.5s;
+    }
+}

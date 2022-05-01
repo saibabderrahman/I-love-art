@@ -1,0 +1,35 @@
+@use  '../custom' as *;
+@use '../componanets/mixins' as *;
+
+
+
+.meno{
+    @include gradeint;
+    li{
+        padding: 0 0.7rem;
+
+        a{
+            color:$white !important ;
+            text-transform: capitalize;
+            font-weight: 600;
+
+
+        }
+    }
+
+    
+};
+.container{
+    a{
+        img{
+            height: 50px;
+            width: 60px;
+        }
+        span{
+            text-transform: capitalize;
+            margin-left: 0.5rem;
+            text-decoration:wavy;
+
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use '../custom' as *;
+
+
+
+// greadint mixins
+@mixin gradeint{
+    background: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,.95)) ;
+
+    
+}    
+
+//center 
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+// absolute center
+
+@mixin absolutecenter {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    
+}

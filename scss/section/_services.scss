@@ -1,0 +1,47 @@
+@use '../custom'as *;
+@use '../componanets/mixins'as *;
+
+
+
+.services{
+    position: relative;
+    padding: 1rem 0;
+        
+
+    &__content{
+        padding: 1rem;
+        margin: 0;
+
+        @include media-breakpoint-up(lg){
+            margin: 1.5rem;
+            
+
+
+        }
+        .icon{
+            font-size: 1rem;
+            color: $primary;
+            margin-bottom: 1rem;
+            @include media-breakpoint-up(lg){
+                font-size: 2.5rem;
+            }
+
+        }
+        p{
+            padding-top: 2rem;
+            @include center;
+            border-top: 1px solid $primary;
+            @include media-breakpoint-up(lg){
+                font-size: 1rem;
+            }
+
+        }
+        .img-fluid{
+            max-height: auto;
+            max-width: auto;
+           
+        }
+    }
+
+
+}

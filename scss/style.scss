@@ -1,0 +1,28 @@
+//impret custom
+ 
+@use 'custom';
+
+
+//imporet the componanets
+@use 'componanets/animation';
+@use 'componanets/buttons';
+@use 'componanets/mixins';
+@use 'componanets/typography';
+
+// imporet the sections
+@use 'section/companis';
+@use 'section/faq';
+@use 'section/footer';
+@use 'section/getstarted';
+@use 'section/intro-section';
+@use 'section/nabar';
+@use 'section/porfolio';
+@use 'section/services';
+@use 'section/testamonains';
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
